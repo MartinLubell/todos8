@@ -1,0 +1,31 @@
+<h1>Editing Account</h1>
+
+<%= form_for(@account) do |f| %>
+
+  <div class="field">
+    <%= f.label :first_name %><br/>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br/>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender %><br/>
+    <%= f.text_field :gender %>
+  </div>
+
+    <div class="field">
+    <%= f.label :age %><br/>
+      <%= f.text_field :age %>
+  </div>
+
+  <div class="actions">
+    <!-- <%= link_to 'Edit', edit_account_path(@account) %>
+  </div> -->
+    <%= f.submit "Update Account" %>
+  </div>
+
+<% end %>

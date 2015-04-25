@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todolists</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if logged_in? %>
+  <div style='float: right;'> 
+      <%= link_to "Home", todolists_url %> |
+      <%= link_to "My Account", accounts_show_path %> |
+    You are logged in as <%= current_user.login %> |
+      <%= link_to "Logout", logout_path, data: {method: :delete} %>
+  </div>
+<% end %>
+
+<% flash.each do |key, value| %>
+  <%= content_tag :p, value, id: key %>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>

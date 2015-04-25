@@ -1,0 +1,13 @@
+<div class="todoitem">
+  <header style="bold"> <%= "#{@todoitem.task_title}" %> </header>
+  <span> Due on: <%= "#{@todoitem.due_date}" %>  </span>
+   <div> Status: <% if (@todoitem.done?) %> Done <% else %> Not Done <% end %> </div>
+  <div>
+    Description: <%= simple_format(@todoitem.description) %>
+  </div>
+</div>
+
+<%= link_to 'Back to List', url_for(:back) %> |
+<%= link_to 'Edit Todo Item', edit_todolist_todoitem_path %> |
+<%= link_to "Delete Todo Item", todolist_todoitem_path,
+  data: { confirm: "todoitem will be deleted?" }, method: :delete %>

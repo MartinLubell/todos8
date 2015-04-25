@@ -1,0 +1,30 @@
+
+<h1>Updated account</h1>
+
+<%= form_for(@account) do |f| %>
+
+  <div class="field">
+    <%= f.label :first_name%><br/>
+    <%= :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br/>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender %><br/>
+    <%= f.text_field :gender %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %><br/>
+    <%= f.text_field :age %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Edit Account" %>
+  </div>
+
+<% end %>

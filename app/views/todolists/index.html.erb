@@ -1,0 +1,35 @@
+<h1>To Do Lists</h1>
+
+<% @todolists.each do |todolist| %>
+  <div class="todolist">
+    <% @complete = true
+       todolist.todoitems.each do |item|
+         if !(item.done?)
+           @complete = false
+           break;
+         end
+       end
+       if (@complete == true) %>
+    
+    <%= link_to "#{todolist.list_name} (#{todolist.list_due_date})", todolist, 
+             class: "todolist_link", style: "color:#00FF00" %> 
+    <% else %>
+    <%= link_to "#{todolist.list_name} (#{todolist.list_due_date})", todolist,
+             class: "todolist_link", style: "color:#FF0000" %>
+    <% end %> <br/>
+    
+  <!--
+    <%= link_to 'Edit', edit_todolist_path(todolist) %>
+    <%= link_to 'Remove', todolist, method: :delete, data: { confirm: 'Are you sure?' } %>
+  -->
+     
+  </div>
+<% end %>
+
+<p />
+
+<%= will_paginate @todolists %>
+
+<br>
+
+<%= link_to 'New Todolist', new_todolist_path %>
