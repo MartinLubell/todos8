@@ -12,5 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require jquery-ui
 //= require_tree .
+
+$(function(){
+  
+  $("#notice").fadeOut(5000);
+
+});

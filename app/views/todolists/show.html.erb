@@ -7,16 +7,12 @@
 
 <%= button_to "Add Todo Item", new_todolist_todoitem_path(@todolist), method: :get %>
 
-<div id="todoitems">
+<div class="todoitem">
   <%= render @todoitems %>
+</div> 
   
+<div class="bottom">
   <%= will_paginate @todoitems %>
-</div>
-
-</p>
-
-
   <%= link_to 'Edit Todo List', edit_todolist_path(@todolist) %> | 
   <%= link_to 'Back to Lists', todolists_path %>
-
-<br></br>
+</div>
