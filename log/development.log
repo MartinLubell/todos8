@@ -17019,3 +17019,2244 @@ This should be valid: 161
   [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
   Rendered todoitems/update_done.js.erb (0.1ms)
 Completed 200 OK in 43ms (Views: 4.5ms | ActiveRecord: 35.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_accounts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_accounts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tags_todoitems_on_todoitem_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tags_todoitems_on_todoitem_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tags_todoitems_on_tag_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tags_todoitems_on_tag_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_todoitems_on_todolist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_todoitems_on_todolist_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_todolists_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_todolists_on_user_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mAccount Load (0.4ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "accounts" WHERE "accounts"."id" = ?  [["id", 29]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "accounts" WHERE "accounts"."id" = ?[0m  [["id", 30]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "accounts" WHERE "accounts"."id" = ?  [["id", 31]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 82]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 83]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 84]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mTodolist Load (0.2ms)[0m  SELECT "todolists".* FROM "todolists"  ORDER BY "todolists"."list_due_date" ASC
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "todolists" WHERE "todolists"."id" = ?  [["id", 52]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todolists" WHERE "todolists"."id" = ?[0m  [["id", 54]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todolists" WHERE "todolists"."id" = ?  [["id", 56]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todolists" WHERE "todolists"."id" = ?[0m  [["id", 53]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todolists" WHERE "todolists"."id" = ?  [["id", 55]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "todolists" WHERE "todolists"."id" = ?[0m  [["id", 57]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36mTodoitem Load (0.3ms)[0m  [1mSELECT "todoitems".* FROM "todoitems"  ORDER BY "todoitems"."due_date" ASC[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 145]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 145]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 152]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 152]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 159]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 159]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 144]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 144]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 151]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 151]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 158]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 158]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 150]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 150]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 157]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 157]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 164]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 164]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 148]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 148]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 155]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 155]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 162]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 162]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 146]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 146]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 153]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 153]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 160]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 160]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 147]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 147]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 154]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 154]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 161]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 161]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 165]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 165]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 149]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 149]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 156]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 156]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 163]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 163]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "tags_todoitems" WHERE "tags_todoitems"."tag_id" = ?  [["tag_id", 50]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 50]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "tags_todoitems" WHERE "tags_todoitems"."tag_id" = ?  [["tag_id", 51]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 51]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "tags_todoitems" WHERE "tags_todoitems"."tag_id" = ?  [["tag_id", 52]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 52]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("login", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["login", "nb"], ["password_digest", "$2a$10$yj6YhHmrOqZ4fsa4TPED2eZ3lUEk8zBKvUFYsMM6jLBJlWnqGsPLa"], ["created_at", "2015-05-03 20:54:56.648848"], ["updated_at", "2015-05-03 20:54:56.648848"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("login", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["login", "Matt"], ["password_digest", "$2a$10$jwZxVODw0mhvt0OdXqN5AufqJAbh1nX/D3yyoKMHfjmY7HZAQGXEe"], ["created_at", "2015-05-03 20:54:56.721366"], ["updated_at", "2015-05-03 20:54:56.721366"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("login", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["login", "Tim"], ["password_digest", "$2a$10$P2BMAyzqyS05iZO2N84xseNBoEN05Q5RRDYVsMlDMCrByU.mL.x6a"], ["created_at", "2015-05-03 20:54:56.793094"], ["updated_at", "2015-05-03 20:54:56.793094"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "accounts" ("age", "gender", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["age", 38], ["gender", "male"], ["first_name", "Napoleon"], ["last_name", "Bonaparte"], ["created_at", "2015-05-03 20:54:56.796791"], ["updated_at", "2015-05-03 20:54:56.796791"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT 1[0m  [["login", "nb"]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = ? LIMIT 1  [["user_id", 85]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "accounts" SET "user_id" = ?, "updated_at" = ? WHERE "accounts"."id" = ?  [["user_id", 85], ["updated_at", "2015-05-03 20:54:56.828637"], ["id", 32]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "accounts" ("age", "gender", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["age", 30], ["gender", "male"], ["first_name", "Matt"], ["last_name", "Bonaparte"], ["created_at", "2015-05-03 20:54:56.832435"], ["updated_at", "2015-05-03 20:54:56.832435"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT 1[0m  [["login", "Matt"]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = ? LIMIT 1  [["user_id", 86]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "accounts" SET "user_id" = ?, "updated_at" = ? WHERE "accounts"."id" = ?  [["user_id", 86], ["updated_at", "2015-05-03 20:54:56.836027"], ["id", 33]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "accounts" ("age", "gender", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["age", 28], ["gender", "male"], ["first_name", "Tim"], ["last_name", "Bonaparte"], ["created_at", "2015-05-03 20:54:56.838487"], ["updated_at", "2015-05-03 20:54:56.838487"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT 1[0m  [["login", "Tim"]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = ? LIMIT 1  [["user_id", 87]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "accounts" SET "user_id" = ?, "updated_at" = ? WHERE "accounts"."id" = ?  [["user_id", 87], ["updated_at", "2015-05-03 20:54:56.843128"], ["id", 34]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todolists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "Italian Campaign"], ["list_due_date", "1796-11-01"], ["user_id", 85], ["created_at", "2015-05-03 20:54:56.850951"], ["updated_at", "2015-05-03 20:54:56.850951"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todolists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "Russian Campaign"], ["list_due_date", "1812-11-30"], ["user_id", 85], ["created_at", "2015-05-03 20:54:56.875998"], ["updated_at", "2015-05-03 20:54:56.875998"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todolists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "Italian Campaign MB"], ["list_due_date", "1796-11-01"], ["user_id", 86], ["created_at", "2015-05-03 20:54:56.880940"], ["updated_at", "2015-05-03 20:54:56.880940"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todolists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "Russian Campaign MB"], ["list_due_date", "1812-11-30"], ["user_id", 86], ["created_at", "2015-05-03 20:54:56.885375"], ["updated_at", "2015-05-03 20:54:56.885375"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todolists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "Italian Campaign TB"], ["list_due_date", "1796-11-01"], ["user_id", 87], ["created_at", "2015-05-03 20:54:56.890468"], ["updated_at", "2015-05-03 20:54:56.890468"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todolists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "Russian Campaign TB"], ["list_due_date", "1812-11-30"], ["user_id", 87], ["created_at", "2015-05-03 20:54:56.894913"], ["updated_at", "2015-05-03 20:54:56.894913"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mTodolist Load (0.3ms)[0m  SELECT  "todolists".* FROM "todolists" WHERE "todolists"."list_name" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 1  [["list_name", "Italian Campaign"]]
+  [1m[36mTodolist Load (0.2ms)[0m  [1mSELECT  "todolists".* FROM "todolists" WHERE "todolists"."list_name" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 1[0m  [["list_name", "Russian Campaign"]]
+  [1m[35mTodolist Load (0.2ms)[0m  SELECT  "todolists".* FROM "todolists" WHERE "todolists"."list_name" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 1  [["list_name", "Italian Campaign MB"]]
+  [1m[36mTodolist Load (0.2ms)[0m  [1mSELECT  "todolists".* FROM "todolists" WHERE "todolists"."list_name" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 1[0m  [["list_name", "Russian Campaign MB"]]
+  [1m[35mTodolist Load (0.1ms)[0m  SELECT  "todolists".* FROM "todolists" WHERE "todolists"."list_name" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 1  [["list_name", "Italian Campaign TB"]]
+  [1m[36mTodolist Load (0.1ms)[0m  [1mSELECT  "todolists".* FROM "todolists" WHERE "todolists"."list_name" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 1[0m  [["list_name", "Russian Campaign TB"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Contact Hannibal for elephants"], ["due_date", "1791-10-20"], ["description", "Wondering if elephants can travel in the Alps!?"], ["done", "f"], ["todolist_id", 60], ["created_at", "2015-05-03 20:54:56.907407"], ["updated_at", "2015-05-03 20:54:56.907407"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Register Comp Corp 10 men"], ["due_date", "1791-10-15"], ["description", "Ask for Corp 10 confirmations letters."], ["done", "f"], ["todolist_id", 60], ["created_at", "2015-05-03 20:54:56.913671"], ["updated_at", "2015-05-03 20:54:56.913671"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Register Company Corp 4 men"], ["due_date", "1796-09-15"], ["description", "Contact all French departments for conscripts."], ["done", "t"], ["todolist_id", 61], ["created_at", "2015-05-03 20:54:56.919621"], ["updated_at", "2015-05-03 20:54:56.919621"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Follow up registration Comp Corp 4"], ["due_date", "1796-10-15"], ["description", "Ask for Corp 4 confirmations letters."], ["done", "t"], ["todolist_id", 61], ["created_at", "2015-05-03 20:54:56.924503"], ["updated_at", "2015-05-03 20:54:56.924503"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Russian rivers survey"], ["due_date", "1795-12-15"], ["description", "Detailled river maps done by military surveyors."], ["done", "t"], ["todolist_id", 61], ["created_at", "2015-05-03 20:54:56.929064"], ["updated_at", "2015-05-03 20:54:56.929064"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Practice building bridges as if over Volvograd River"], ["due_date", "1811-10-13"], ["description", "Strength tests need to be performed."], ["done", "f"], ["todolist_id", 61], ["created_at", "2015-05-03 20:54:56.934120"], ["updated_at", "2015-05-03 20:54:56.934120"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Send peace letter"], ["due_date", "1795-10-15"], ["description", "Show we are friends before we attack."], ["done", "f"], ["todolist_id", 61], ["created_at", "2015-05-03 20:54:56.938251"], ["updated_at", "2015-05-03 20:54:56.938251"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Contact Hannibal for elephants"], ["due_date", "1791-10-20"], ["description", "Wondering if elephants can travel in the Alps!?"], ["done", "f"], ["todolist_id", 62], ["created_at", "2015-05-03 20:54:56.942343"], ["updated_at", "2015-05-03 20:54:56.942343"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Register Comp Corp 10 men"], ["due_date", "1791-10-15"], ["description", "Ask for Corp 10 confirmations letters."], ["done", "f"], ["todolist_id", 62], ["created_at", "2015-05-03 20:54:56.947063"], ["updated_at", "2015-05-03 20:54:56.947063"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Register Company Corp 4 men"], ["due_date", "1796-09-15"], ["description", "Contact all French departments for conscripts."], ["done", "t"], ["todolist_id", 63], ["created_at", "2015-05-03 20:54:56.951196"], ["updated_at", "2015-05-03 20:54:56.951196"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Follow up registration Comp Corp 4"], ["due_date", "1796-10-15"], ["description", "Ask for Corp 4 confirmations letters."], ["done", "f"], ["todolist_id", 63], ["created_at", "2015-05-03 20:54:56.955097"], ["updated_at", "2015-05-03 20:54:56.955097"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Russian rivers survey"], ["due_date", "1795-12-15"], ["description", "Detailled river maps done by military surveyors."], ["done", "t"], ["todolist_id", 63], ["created_at", "2015-05-03 20:54:56.959721"], ["updated_at", "2015-05-03 20:54:56.959721"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Practice building bridges as if over Volvograd River"], ["due_date", "1811-10-13"], ["description", "Strength tests need to be performed."], ["done", "f"], ["todolist_id", 63], ["created_at", "2015-05-03 20:54:56.964721"], ["updated_at", "2015-05-03 20:54:56.964721"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Send peace letter"], ["due_date", "1795-10-15"], ["description", "Show we are friends before we attack."], ["done", "f"], ["todolist_id", 63], ["created_at", "2015-05-03 20:54:56.968788"], ["updated_at", "2015-05-03 20:54:56.968788"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Contact Hannibal for elephants"], ["due_date", "1791-10-20"], ["description", "Wondering if elephants can travel in the Alps!?"], ["done", "f"], ["todolist_id", 58], ["created_at", "2015-05-03 20:54:56.973762"], ["updated_at", "2015-05-03 20:54:56.973762"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Register Comp Corp 10 men"], ["due_date", "1791-10-15"], ["description", "Ask for Corp 10 confirmations letters."], ["done", "f"], ["todolist_id", 58], ["created_at", "2015-05-03 20:54:56.978268"], ["updated_at", "2015-05-03 20:54:56.978268"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Register Company Corp 4 men"], ["due_date", "1796-09-15"], ["description", "Contact all French departments for conscripts."], ["done", "t"], ["todolist_id", 59], ["created_at", "2015-05-03 20:54:56.982919"], ["updated_at", "2015-05-03 20:54:56.982919"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Follow up registration Comp Corp 4"], ["due_date", "1796-10-15"], ["description", "Ask for Corp 4 confirmations letters."], ["done", "f"], ["todolist_id", 59], ["created_at", "2015-05-03 20:54:56.986444"], ["updated_at", "2015-05-03 20:54:56.986444"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Russian rivers survey"], ["due_date", "1795-12-15"], ["description", "Detailled river maps done by military surveyors."], ["done", "t"], ["todolist_id", 59], ["created_at", "2015-05-03 20:54:56.989866"], ["updated_at", "2015-05-03 20:54:56.989866"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Practice building bridges as if over Volvograd River"], ["due_date", "1811-10-13"], ["description", "Strength tests need to be performed."], ["done", "f"], ["todolist_id", 59], ["created_at", "2015-05-03 20:54:56.994330"], ["updated_at", "2015-05-03 20:54:56.994330"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Send peace letter"], ["due_date", "1795-10-15"], ["description", "Show we are friends before we attack."], ["done", "f"], ["todolist_id", 59], ["created_at", "2015-05-03 20:54:56.998855"], ["updated_at", "2015-05-03 20:54:56.998855"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Power Consolidation"], ["due_date", "1799-10-12"], ["description", "Combine our forces power."], ["done", "t"], ["todolist_id", 59], ["created_at", "2015-05-03 20:54:57.005332"], ["updated_at", "2015-05-03 20:54:57.005332"]]
+  [1m[36m (8.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mTodoitem Load (0.4ms)[0m  SELECT  "todoitems".* FROM "todoitems" WHERE "todoitems"."task_title" = ?  ORDER BY "todoitems"."due_date" ASC LIMIT 1  [["task_title", "Russian rivers survey"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("tag_name", "created_at", "updated_at") VALUES (?, ?, ?)  [["tag_name", "Urgent"], ["created_at", "2015-05-03 20:54:57.019278"], ["updated_at", "2015-05-03 20:54:57.019278"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags_todoitems" ("todoitem_id", "tag_id") VALUES (?, ?)[0m  [["todoitem_id", 170], ["tag_id", 53]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("tag_name", "created_at", "updated_at") VALUES (?, ?, ?)  [["tag_name", "French War Minister"], ["created_at", "2015-05-03 20:54:57.026292"], ["updated_at", "2015-05-03 20:54:57.026292"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tags_todoitems" ("todoitem_id", "tag_id") VALUES (?, ?)[0m  [["todoitem_id", 170], ["tag_id", 54]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("tag_name", "created_at", "updated_at") VALUES (?, ?, ?)  [["tag_name", "Construction"], ["created_at", "2015-05-03 20:54:57.031795"], ["updated_at", "2015-05-03 20:54:57.031795"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tags_todoitems" ("todoitem_id", "tag_id") VALUES (?, ?)[0m  [["todoitem_id", 170], ["tag_id", 55]]
+  [1m[35m (1.7ms)[0m  commit transaction
+
+
+Started DELETE "/logout" for ::1 at 2015-05-03 16:55:12 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"g/2w3RbfnuYIWw3xu0rbRH+Qnjb7Z3L9QzgzhHZBS6H2DYktYaLpYZivmEGEyM9Wt/42s4+gohjKg0bqavNwkw=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 27ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-05-03 16:55:12 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (99.2ms)
+Completed 200 OK in 1290ms (Views: 1289.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/accordion-ad7eda240331939ff10d25352a0315bc.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/menu-7a7c9529e62d35813ed0a71fa95242f2.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete-5e5a4d7f1f80d346d596661253ace339.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/droppable-75fb6ed9dbb83bf1f0f29c2d15778318.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/effect-2021355f2a0aeca6f77406c225e16af5.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/effect-blind-49d6ffb6eb5c076034162b6d1e1745c3.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/effect-bounce-e72f4f6a65b157d929fbd89f8b2390dd.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/effect-clip-cd4d51c0674f351a44707a41658b7181.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/effect-drop-def98505446ba9f512233830d6500f3a.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/effect-explode-0a42b7e95cf8a3d90da3cb3dce943a8d.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fold-de72205ff2880aa41078b5abe1865cba.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fade-4d808b81f828c7dc6c8b1618d80ed32b.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/effect-highlight-32a231f33cb93ea3ed13cb952bd04c90.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/effect-size-c7ef7adb8e56fe4a76a11dbefcffdad9.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/effect-scale-ce6a6c37c94c883819a78d6815bf71b7.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/effect-puff-35dacd87c19580d27466f980033f6892.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/effect-pulsate-3dbd9c7d4f02ace765adbf794ac8044c.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/effect-slide-5627960ce4f5e1b55f41ee66fe69a1ba.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/effect-transfer-6db8c857d6ae811d1e346fcaf1165390.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar-5bf852897daa19be16725667f5a6d57f.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/selectable-d48286707119e8a116e86cadea677a1b.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu-a8caf21ea3cb8d2fa75cef3aaa007081.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/slider-6fc52f20a37b8f070be1c7e94660e582.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/effect-shake-efb89015cc38a02f2cbaaa355ebd0aa1.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/spinner-ea9e3d6dad328d69198074f73b929b40.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip-974e8ae1e520e685f34c034cd4170ae9.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/jquery-ui-25658f2409fde34c2d638c3816cdce17.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/accounts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/todoitems-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started GET "/assets/application-adf7ac84666ad7c14c64b3725f22caa5.js?body=1" for ::1 at 2015-05-03 16:55:14 -0400
+
+
+Started POST "/sessions" for ::1 at 2015-05-03 16:55:30 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+TxJERSTQXHjPR5Z5N/AUHdQuOGMvYv4XV59ZX/7+2rsswZrHC2bCbQAY8wKmreoehI5ado2yt6Wi/kvZi3F9g==", "user"=>{"login"=>"nb", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT 1  [["login", "nb"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 152ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2015-05-03 16:55:30 -0400
+Processing by TodolistsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 85]]
+  [1m[35mTodolist Load (0.4ms)[0m  SELECT  "todolists".* FROM "todolists" WHERE "todolists"."user_id" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 5 OFFSET 0  [["user_id", 85]]
+  [1m[36mTodoitem Load (0.4ms)[0m  [1mSELECT "todoitems".* FROM "todoitems" WHERE "todoitems"."todolist_id" = ?  ORDER BY "todoitems"."due_date" ASC[0m  [["todolist_id", 58]]
+  [1m[35mTodoitem Load (0.2ms)[0m  SELECT "todoitems".* FROM "todoitems" WHERE "todoitems"."todolist_id" = ?  ORDER BY "todoitems"."due_date" ASC  [["todolist_id", 59]]
+  Rendered todolists/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 265ms (Views: 234.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/accordion-ad7eda240331939ff10d25352a0315bc.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/menu-7a7c9529e62d35813ed0a71fa95242f2.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete-5e5a4d7f1f80d346d596661253ace339.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/droppable-75fb6ed9dbb83bf1f0f29c2d15778318.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/effect-2021355f2a0aeca6f77406c225e16af5.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/effect-blind-49d6ffb6eb5c076034162b6d1e1745c3.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/effect-bounce-e72f4f6a65b157d929fbd89f8b2390dd.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/effect-clip-cd4d51c0674f351a44707a41658b7181.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/effect-drop-def98505446ba9f512233830d6500f3a.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/effect-explode-0a42b7e95cf8a3d90da3cb3dce943a8d.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fade-4d808b81f828c7dc6c8b1618d80ed32b.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fold-de72205ff2880aa41078b5abe1865cba.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/effect-highlight-32a231f33cb93ea3ed13cb952bd04c90.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/effect-size-c7ef7adb8e56fe4a76a11dbefcffdad9.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/effect-scale-ce6a6c37c94c883819a78d6815bf71b7.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/effect-puff-35dacd87c19580d27466f980033f6892.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/effect-pulsate-3dbd9c7d4f02ace765adbf794ac8044c.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/effect-shake-efb89015cc38a02f2cbaaa355ebd0aa1.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/effect-slide-5627960ce4f5e1b55f41ee66fe69a1ba.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/effect-transfer-6db8c857d6ae811d1e346fcaf1165390.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar-5bf852897daa19be16725667f5a6d57f.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/selectable-d48286707119e8a116e86cadea677a1b.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu-a8caf21ea3cb8d2fa75cef3aaa007081.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/slider-6fc52f20a37b8f070be1c7e94660e582.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/spinner-ea9e3d6dad328d69198074f73b929b40.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip-974e8ae1e520e685f34c034cd4170ae9.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/jquery-ui-25658f2409fde34c2d638c3816cdce17.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/accounts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/todoitems-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started GET "/assets/application-adf7ac84666ad7c14c64b3725f22caa5.js?body=1" for ::1 at 2015-05-03 16:55:30 -0400
+
+
+Started DELETE "/logout" for ::1 at 2015-05-03 16:55:39 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Y3kjgBlvEwe+C4nEXapNQyIfJeqotX42xDP5Ol7dTmF29mz6EdHJf+k29FGz7zq7L12kYv4+PxAP5n1wRwtw/Q=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-05-03 16:55:39 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 276ms (Views: 275.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-05-03 16:55:39 -0400
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for ::1 at 2015-05-03 16:55:39 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-05-03 16:55:39 -0400
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for ::1 at 2015-05-03 16:55:39 -0400
+
+
+Started GET "/assets/jquery-ui/accordion-ad7eda240331939ff10d25352a0315bc.js?body=1" for ::1 at 2015-05-03 16:55:39 -0400
+
+
+Started GET "/assets/jquery-ui/menu-7a7c9529e62d35813ed0a71fa95242f2.js?body=1" for ::1 at 2015-05-03 16:55:39 -0400
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for ::1 at 2015-05-03 16:55:39 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete-5e5a4d7f1f80d346d596661253ace339.js?body=1" for ::1 at 2015-05-03 16:55:39 -0400
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for ::1 at 2015-05-03 16:55:39 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for ::1 at 2015-05-03 16:55:39 -0400
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for ::1 at 2015-05-03 16:55:39 -0400
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for ::1 at 2015-05-03 16:55:39 -0400
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for ::1 at 2015-05-03 16:55:39 -0400
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for ::1 at 2015-05-03 16:55:39 -0400
+
+
+Started GET "/assets/jquery-ui/droppable-75fb6ed9dbb83bf1f0f29c2d15778318.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/effect-2021355f2a0aeca6f77406c225e16af5.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/effect-blind-49d6ffb6eb5c076034162b6d1e1745c3.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/effect-bounce-e72f4f6a65b157d929fbd89f8b2390dd.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/effect-clip-cd4d51c0674f351a44707a41658b7181.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/effect-drop-def98505446ba9f512233830d6500f3a.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/effect-explode-0a42b7e95cf8a3d90da3cb3dce943a8d.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fade-4d808b81f828c7dc6c8b1618d80ed32b.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fold-de72205ff2880aa41078b5abe1865cba.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/effect-highlight-32a231f33cb93ea3ed13cb952bd04c90.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/effect-size-c7ef7adb8e56fe4a76a11dbefcffdad9.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/effect-scale-ce6a6c37c94c883819a78d6815bf71b7.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/effect-puff-35dacd87c19580d27466f980033f6892.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/effect-pulsate-3dbd9c7d4f02ace765adbf794ac8044c.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/effect-slide-5627960ce4f5e1b55f41ee66fe69a1ba.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/effect-shake-efb89015cc38a02f2cbaaa355ebd0aa1.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/effect-transfer-6db8c857d6ae811d1e346fcaf1165390.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar-5bf852897daa19be16725667f5a6d57f.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/selectable-d48286707119e8a116e86cadea677a1b.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/slider-6fc52f20a37b8f070be1c7e94660e582.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu-a8caf21ea3cb8d2fa75cef3aaa007081.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/spinner-ea9e3d6dad328d69198074f73b929b40.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip-974e8ae1e520e685f34c034cd4170ae9.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/accounts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/todoitems-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/jquery-ui-25658f2409fde34c2d638c3816cdce17.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started GET "/assets/application-adf7ac84666ad7c14c64b3725f22caa5.js?body=1" for ::1 at 2015-05-03 16:55:40 -0400
+
+
+Started POST "/sessions" for ::1 at 2015-05-03 16:57:48 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VKQI1i+C5hjWQc8/tF/i8pHXvWQpjTAlOXJBv3EpnR3XrR7y2JAMSCJ+VTFFR+4xoSHb4LHAnuoAcwEp097ekA==", "user"=>{"login"=>"Matt", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT 1[0m  [["login", "Matt"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 73ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-03 16:57:48 -0400
+Processing by TodolistsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 86]]
+  [1m[36mTodolist Load (0.2ms)[0m  [1mSELECT  "todolists".* FROM "todolists" WHERE "todolists"."user_id" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 5 OFFSET 0[0m  [["user_id", 86]]
+  [1m[35mTodoitem Load (0.1ms)[0m  SELECT "todoitems".* FROM "todoitems" WHERE "todoitems"."todolist_id" = ?  ORDER BY "todoitems"."due_date" ASC  [["todolist_id", 60]]
+  [1m[36mTodoitem Load (0.2ms)[0m  [1mSELECT "todoitems".* FROM "todoitems" WHERE "todoitems"."todolist_id" = ?  ORDER BY "todoitems"."due_date" ASC[0m  [["todolist_id", 61]]
+  Rendered todolists/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 206ms (Views: 203.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/menu-7a7c9529e62d35813ed0a71fa95242f2.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/accordion-ad7eda240331939ff10d25352a0315bc.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete-5e5a4d7f1f80d346d596661253ace339.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/droppable-75fb6ed9dbb83bf1f0f29c2d15778318.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/effect-2021355f2a0aeca6f77406c225e16af5.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/effect-blind-49d6ffb6eb5c076034162b6d1e1745c3.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/effect-bounce-e72f4f6a65b157d929fbd89f8b2390dd.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/effect-clip-cd4d51c0674f351a44707a41658b7181.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/effect-drop-def98505446ba9f512233830d6500f3a.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/effect-explode-0a42b7e95cf8a3d90da3cb3dce943a8d.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fold-de72205ff2880aa41078b5abe1865cba.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fade-4d808b81f828c7dc6c8b1618d80ed32b.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/effect-highlight-32a231f33cb93ea3ed13cb952bd04c90.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/effect-size-c7ef7adb8e56fe4a76a11dbefcffdad9.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/effect-scale-ce6a6c37c94c883819a78d6815bf71b7.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/effect-puff-35dacd87c19580d27466f980033f6892.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/effect-pulsate-3dbd9c7d4f02ace765adbf794ac8044c.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/effect-shake-efb89015cc38a02f2cbaaa355ebd0aa1.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/effect-slide-5627960ce4f5e1b55f41ee66fe69a1ba.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/effect-transfer-6db8c857d6ae811d1e346fcaf1165390.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar-5bf852897daa19be16725667f5a6d57f.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/selectable-d48286707119e8a116e86cadea677a1b.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu-a8caf21ea3cb8d2fa75cef3aaa007081.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/slider-6fc52f20a37b8f070be1c7e94660e582.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/spinner-ea9e3d6dad328d69198074f73b929b40.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip-974e8ae1e520e685f34c034cd4170ae9.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/jquery-ui-25658f2409fde34c2d638c3816cdce17.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/accounts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/todoitems-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/assets/application-adf7ac84666ad7c14c64b3725f22caa5.js?body=1" for ::1 at 2015-05-03 16:57:48 -0400
+
+
+Started GET "/todolists/61" for ::1 at 2015-05-03 16:57:51 -0400
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"61"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 86]]
+  [1m[36mTodolist Load (0.2ms)[0m  [1mSELECT  "todolists".* FROM "todolists" WHERE "todolists"."user_id" = ? AND "todolists"."id" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 1[0m  [["user_id", 86], ["id", 61]]
+  [1m[35mTodoitem Load (0.3ms)[0m  SELECT  "todoitems".* FROM "todoitems" WHERE "todoitems"."todolist_id" = ?  ORDER BY "todoitems"."due_date" ASC LIMIT 5 OFFSET 0  [["todolist_id", 61]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "todoitems" WHERE "todoitems"."todolist_id" = ?[0m  [["todolist_id", 61]]
+  Rendered todoitems/_todoitem.html.erb (37.3ms)
+  Rendered todolists/show.html.erb within layouts/application (69.3ms)
+Completed 200 OK in 254ms (Views: 250.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/accordion-ad7eda240331939ff10d25352a0315bc.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/menu-7a7c9529e62d35813ed0a71fa95242f2.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete-5e5a4d7f1f80d346d596661253ace339.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/droppable-75fb6ed9dbb83bf1f0f29c2d15778318.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-2021355f2a0aeca6f77406c225e16af5.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-blind-49d6ffb6eb5c076034162b6d1e1745c3.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-drop-def98505446ba9f512233830d6500f3a.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-bounce-e72f4f6a65b157d929fbd89f8b2390dd.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-clip-cd4d51c0674f351a44707a41658b7181.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-explode-0a42b7e95cf8a3d90da3cb3dce943a8d.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fade-4d808b81f828c7dc6c8b1618d80ed32b.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fold-de72205ff2880aa41078b5abe1865cba.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-highlight-32a231f33cb93ea3ed13cb952bd04c90.js?body=1" for ::1 at 2015-05-03 16:57:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-size-c7ef7adb8e56fe4a76a11dbefcffdad9.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/jquery-ui/effect-scale-ce6a6c37c94c883819a78d6815bf71b7.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/jquery-ui/effect-puff-35dacd87c19580d27466f980033f6892.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/jquery-ui/effect-pulsate-3dbd9c7d4f02ace765adbf794ac8044c.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/jquery-ui/effect-shake-efb89015cc38a02f2cbaaa355ebd0aa1.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/jquery-ui/effect-slide-5627960ce4f5e1b55f41ee66fe69a1ba.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/jquery-ui/effect-transfer-6db8c857d6ae811d1e346fcaf1165390.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar-5bf852897daa19be16725667f5a6d57f.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/jquery-ui/selectable-d48286707119e8a116e86cadea677a1b.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu-a8caf21ea3cb8d2fa75cef3aaa007081.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/jquery-ui/slider-6fc52f20a37b8f070be1c7e94660e582.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/jquery-ui/spinner-ea9e3d6dad328d69198074f73b929b40.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip-974e8ae1e520e685f34c034cd4170ae9.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/jquery-ui-25658f2409fde34c2d638c3816cdce17.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/accounts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/todoitems-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/assets/application-adf7ac84666ad7c14c64b3725f22caa5.js?body=1" for ::1 at 2015-05-03 16:57:52 -0400
+
+
+Started GET "/todoitems/update_done?todoitem_dom_id=todoitem_171&todoitem_id=171&todolist_id=61" for ::1 at 2015-05-03 16:58:02 -0400
+Processing by TodoitemsController#update_done as JS
+  Parameters: {"todoitem_dom_id"=>"todoitem_171", "todoitem_id"=>"171", "todolist_id"=>"61"}
+This should be valid: 171
+  [1m[35mTodoitem Load (0.2ms)[0m  SELECT  "todoitems".* FROM "todoitems" WHERE "todoitems"."id" = ?  ORDER BY "todoitems"."due_date" ASC LIMIT 1  [["id", 171]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  UPDATE "todoitems" SET "done" = ?, "updated_at" = ? WHERE "todoitems"."id" = ?  [["done", "t"], ["updated_at", "2015-05-03 20:58:02.367279"], ["id", 171]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  Rendered todoitems/update_done.js.erb (0.7ms)
+Completed 200 OK in 42ms (Views: 7.2ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/todolists/60" for ::1 at 2015-05-03 16:58:15 -0400
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 86]]
+  [1m[36mTodolist Load (0.1ms)[0m  [1mSELECT  "todolists".* FROM "todolists" WHERE "todolists"."user_id" = ? AND "todolists"."id" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 1[0m  [["user_id", 86], ["id", 60]]
+  [1m[35mTodoitem Load (0.2ms)[0m  SELECT  "todoitems".* FROM "todoitems" WHERE "todoitems"."todolist_id" = ?  ORDER BY "todoitems"."due_date" ASC LIMIT 5 OFFSET 0  [["todolist_id", 60]]
+  Rendered todoitems/_todoitem.html.erb (2.6ms)
+  Rendered todolists/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 199ms (Views: 194.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-05-03 16:58:15 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-05-03 16:58:15 -0400
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for ::1 at 2015-05-03 16:58:15 -0400
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for ::1 at 2015-05-03 16:58:15 -0400
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for ::1 at 2015-05-03 16:58:15 -0400
+
+
+Started GET "/assets/jquery-ui/accordion-ad7eda240331939ff10d25352a0315bc.js?body=1" for ::1 at 2015-05-03 16:58:15 -0400
+
+
+Started GET "/assets/jquery-ui/menu-7a7c9529e62d35813ed0a71fa95242f2.js?body=1" for ::1 at 2015-05-03 16:58:15 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete-5e5a4d7f1f80d346d596661253ace339.js?body=1" for ::1 at 2015-05-03 16:58:15 -0400
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for ::1 at 2015-05-03 16:58:15 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for ::1 at 2015-05-03 16:58:15 -0400
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/effect-2021355f2a0aeca6f77406c225e16af5.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/droppable-75fb6ed9dbb83bf1f0f29c2d15778318.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/effect-blind-49d6ffb6eb5c076034162b6d1e1745c3.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/effect-bounce-e72f4f6a65b157d929fbd89f8b2390dd.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/effect-clip-cd4d51c0674f351a44707a41658b7181.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/effect-drop-def98505446ba9f512233830d6500f3a.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/effect-explode-0a42b7e95cf8a3d90da3cb3dce943a8d.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fold-de72205ff2880aa41078b5abe1865cba.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fade-4d808b81f828c7dc6c8b1618d80ed32b.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/effect-highlight-32a231f33cb93ea3ed13cb952bd04c90.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/effect-size-c7ef7adb8e56fe4a76a11dbefcffdad9.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/effect-scale-ce6a6c37c94c883819a78d6815bf71b7.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/effect-pulsate-3dbd9c7d4f02ace765adbf794ac8044c.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/effect-puff-35dacd87c19580d27466f980033f6892.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/effect-shake-efb89015cc38a02f2cbaaa355ebd0aa1.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/effect-slide-5627960ce4f5e1b55f41ee66fe69a1ba.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/effect-transfer-6db8c857d6ae811d1e346fcaf1165390.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/selectable-d48286707119e8a116e86cadea677a1b.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar-5bf852897daa19be16725667f5a6d57f.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu-a8caf21ea3cb8d2fa75cef3aaa007081.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/slider-6fc52f20a37b8f070be1c7e94660e582.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/spinner-ea9e3d6dad328d69198074f73b929b40.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip-974e8ae1e520e685f34c034cd4170ae9.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/jquery-ui-25658f2409fde34c2d638c3816cdce17.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/accounts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/todoitems-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/assets/application-adf7ac84666ad7c14c64b3725f22caa5.js?body=1" for ::1 at 2015-05-03 16:58:16 -0400
+
+
+Started GET "/todoitems/update_done?todoitem_dom_id=todoitem_167&todoitem_id=167&todolist_id=60" for ::1 at 2015-05-03 16:58:21 -0400
+Processing by TodoitemsController#update_done as JS
+  Parameters: {"todoitem_dom_id"=>"todoitem_167", "todoitem_id"=>"167", "todolist_id"=>"60"}
+This should be valid: 167
+  [1m[36mTodoitem Load (0.1ms)[0m  [1mSELECT  "todoitems".* FROM "todoitems" WHERE "todoitems"."id" = ?  ORDER BY "todoitems"."due_date" ASC LIMIT 1[0m  [["id", 167]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (21.8ms)[0m  [1mUPDATE "todoitems" SET "done" = ?, "updated_at" = ? WHERE "todoitems"."id" = ?[0m  [["done", "t"], ["updated_at", "2015-05-03 20:58:21.704815"], ["id", 167]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  Rendered todoitems/update_done.js.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 3.2ms | ActiveRecord: 22.8ms)
+
+
+Started GET "/todolists/60" for ::1 at 2015-05-03 16:58:24 -0400
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 86]]
+  [1m[35mTodolist Load (0.1ms)[0m  SELECT  "todolists".* FROM "todolists" WHERE "todolists"."user_id" = ? AND "todolists"."id" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 1  [["user_id", 86], ["id", 60]]
+  [1m[36mTodoitem Load (0.2ms)[0m  [1mSELECT  "todoitems".* FROM "todoitems" WHERE "todoitems"."todolist_id" = ?  ORDER BY "todoitems"."due_date" ASC LIMIT 5 OFFSET 0[0m  [["todolist_id", 60]]
+  Rendered todoitems/_todoitem.html.erb (0.9ms)
+  Rendered todolists/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 200ms (Views: 195.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/accordion-ad7eda240331939ff10d25352a0315bc.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/application-f4ac9119f78af9b0d19f9eafa7da2441.css?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/menu-7a7c9529e62d35813ed0a71fa95242f2.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete-5e5a4d7f1f80d346d596661253ace339.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/droppable-75fb6ed9dbb83bf1f0f29c2d15778318.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-2021355f2a0aeca6f77406c225e16af5.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-blind-49d6ffb6eb5c076034162b6d1e1745c3.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-bounce-e72f4f6a65b157d929fbd89f8b2390dd.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-clip-cd4d51c0674f351a44707a41658b7181.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-drop-def98505446ba9f512233830d6500f3a.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-explode-0a42b7e95cf8a3d90da3cb3dce943a8d.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fade-4d808b81f828c7dc6c8b1618d80ed32b.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fold-de72205ff2880aa41078b5abe1865cba.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-size-c7ef7adb8e56fe4a76a11dbefcffdad9.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-highlight-32a231f33cb93ea3ed13cb952bd04c90.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-scale-ce6a6c37c94c883819a78d6815bf71b7.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-puff-35dacd87c19580d27466f980033f6892.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-shake-efb89015cc38a02f2cbaaa355ebd0aa1.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-pulsate-3dbd9c7d4f02ace765adbf794ac8044c.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-slide-5627960ce4f5e1b55f41ee66fe69a1ba.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-transfer-6db8c857d6ae811d1e346fcaf1165390.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar-5bf852897daa19be16725667f5a6d57f.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/selectable-d48286707119e8a116e86cadea677a1b.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu-a8caf21ea3cb8d2fa75cef3aaa007081.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/slider-6fc52f20a37b8f070be1c7e94660e582.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/spinner-ea9e3d6dad328d69198074f73b929b40.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip-974e8ae1e520e685f34c034cd4170ae9.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/jquery-ui-25658f2409fde34c2d638c3816cdce17.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/accounts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/todoitems-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+
+
+Started GET "/assets/application-adf7ac84666ad7c14c64b3725f22caa5.js?body=1" for ::1 at 2015-05-03 16:58:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "accounts" WHERE "accounts"."id" = ?  [["id", 32]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "accounts" WHERE "accounts"."id" = ?[0m  [["id", 33]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "accounts" WHERE "accounts"."id" = ?  [["id", 34]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 85]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 86]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 87]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mTodolist Load (0.2ms)[0m  SELECT "todolists".* FROM "todolists"  ORDER BY "todolists"."list_due_date" ASC
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "todolists" WHERE "todolists"."id" = ?  [["id", 58]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todolists" WHERE "todolists"."id" = ?[0m  [["id", 60]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todolists" WHERE "todolists"."id" = ?  [["id", 62]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todolists" WHERE "todolists"."id" = ?[0m  [["id", 59]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "todolists" WHERE "todolists"."id" = ?  [["id", 61]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todolists" WHERE "todolists"."id" = ?[0m  [["id", 63]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mTodoitem Load (0.7ms)[0m  [1mSELECT "todoitems".* FROM "todoitems"  ORDER BY "todoitems"."due_date" ASC[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 167]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 167]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 174]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 174]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 181]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 181]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 166]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 166]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 173]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 173]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 180]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 180]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 172]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 172]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 179]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 179]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 186]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 186]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 170]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 170]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 177]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 177]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 184]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 184]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 168]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 168]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 175]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 175]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 182]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 182]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 169]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 169]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 176]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 176]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 183]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 183]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 187]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 187]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 171]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 171]]
+  [1m[36m (30.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 178]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 178]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags_todoitems" WHERE "tags_todoitems"."todoitem_id" = ?[0m  [["todoitem_id", 185]]
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "todoitems" WHERE "todoitems"."id" = ?  [["id", 185]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "tags_todoitems" WHERE "tags_todoitems"."tag_id" = ?  [["tag_id", 53]]
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 53]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "tags_todoitems" WHERE "tags_todoitems"."tag_id" = ?  [["tag_id", 54]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 54]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "tags_todoitems" WHERE "tags_todoitems"."tag_id" = ?  [["tag_id", 55]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 55]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("login", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["login", "nb"], ["password_digest", "$2a$10$ghgcY.Tf.m5AHXiJC4gjM.IqhlhKZTmxkd4uJyyMc.rjBoqHeFii2"], ["created_at", "2015-05-03 20:59:10.059013"], ["updated_at", "2015-05-03 20:59:10.059013"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("login", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["login", "Matt"], ["password_digest", "$2a$10$Fl.Qa/nwmnOzejunjDloAuNdaNo9ZYaweSpC.J5M2RzELqmC.q6pm"], ["created_at", "2015-05-03 20:59:10.134007"], ["updated_at", "2015-05-03 20:59:10.134007"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("login", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["login", "Tim"], ["password_digest", "$2a$10$jdxeglG2SP73gLEM5FD6Q.reDsnDBPvNRasym1Eh8lQy3OphME3oG"], ["created_at", "2015-05-03 20:59:10.205847"], ["updated_at", "2015-05-03 20:59:10.205847"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "accounts" ("age", "gender", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["age", 38], ["gender", "male"], ["first_name", "Napoleon"], ["last_name", "Bonaparte"], ["created_at", "2015-05-03 20:59:10.208807"], ["updated_at", "2015-05-03 20:59:10.208807"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT 1[0m  [["login", "nb"]]
+  [1m[35mAccount Load (0.2ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = ? LIMIT 1  [["user_id", 88]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "accounts" SET "user_id" = ?, "updated_at" = ? WHERE "accounts"."id" = ?  [["user_id", 88], ["updated_at", "2015-05-03 20:59:10.259163"], ["id", 35]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "accounts" ("age", "gender", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["age", 30], ["gender", "male"], ["first_name", "Matt"], ["last_name", "Bonaparte"], ["created_at", "2015-05-03 20:59:10.262695"], ["updated_at", "2015-05-03 20:59:10.262695"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT 1[0m  [["login", "Matt"]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = ? LIMIT 1  [["user_id", 89]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "accounts" SET "user_id" = ?, "updated_at" = ? WHERE "accounts"."id" = ?  [["user_id", 89], ["updated_at", "2015-05-03 20:59:10.266133"], ["id", 36]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "accounts" ("age", "gender", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["age", 28], ["gender", "male"], ["first_name", "Tim"], ["last_name", "Bonaparte"], ["created_at", "2015-05-03 20:59:10.268580"], ["updated_at", "2015-05-03 20:59:10.268580"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT 1[0m  [["login", "Tim"]]
+  [1m[35mAccount Load (0.1ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = ? LIMIT 1  [["user_id", 90]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "accounts" SET "user_id" = ?, "updated_at" = ? WHERE "accounts"."id" = ?  [["user_id", 90], ["updated_at", "2015-05-03 20:59:10.272300"], ["id", 37]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todolists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "Italian Campaign"], ["list_due_date", "1796-11-01"], ["user_id", 88], ["created_at", "2015-05-03 20:59:10.279572"], ["updated_at", "2015-05-03 20:59:10.279572"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todolists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "Russian Campaign"], ["list_due_date", "1812-11-30"], ["user_id", 88], ["created_at", "2015-05-03 20:59:10.283542"], ["updated_at", "2015-05-03 20:59:10.283542"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todolists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "Italian Campaign MB"], ["list_due_date", "1796-11-01"], ["user_id", 89], ["created_at", "2015-05-03 20:59:10.287353"], ["updated_at", "2015-05-03 20:59:10.287353"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todolists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "Russian Campaign MB"], ["list_due_date", "1812-11-30"], ["user_id", 89], ["created_at", "2015-05-03 20:59:10.290821"], ["updated_at", "2015-05-03 20:59:10.290821"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todolists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["list_name", "Italian Campaign TB"], ["list_due_date", "1796-11-01"], ["user_id", 90], ["created_at", "2015-05-03 20:59:10.295077"], ["updated_at", "2015-05-03 20:59:10.295077"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todolists" ("list_name", "list_due_date", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["list_name", "Russian Campaign TB"], ["list_due_date", "1812-11-30"], ["user_id", 90], ["created_at", "2015-05-03 20:59:10.298714"], ["updated_at", "2015-05-03 20:59:10.298714"]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mTodolist Load (0.2ms)[0m  SELECT  "todolists".* FROM "todolists" WHERE "todolists"."list_name" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 1  [["list_name", "Italian Campaign"]]
+  [1m[36mTodolist Load (0.1ms)[0m  [1mSELECT  "todolists".* FROM "todolists" WHERE "todolists"."list_name" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 1[0m  [["list_name", "Russian Campaign"]]
+  [1m[35mTodolist Load (0.1ms)[0m  SELECT  "todolists".* FROM "todolists" WHERE "todolists"."list_name" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 1  [["list_name", "Italian Campaign MB"]]
+  [1m[36mTodolist Load (0.1ms)[0m  [1mSELECT  "todolists".* FROM "todolists" WHERE "todolists"."list_name" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 1[0m  [["list_name", "Russian Campaign MB"]]
+  [1m[35mTodolist Load (0.1ms)[0m  SELECT  "todolists".* FROM "todolists" WHERE "todolists"."list_name" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 1  [["list_name", "Italian Campaign TB"]]
+  [1m[36mTodolist Load (0.1ms)[0m  [1mSELECT  "todolists".* FROM "todolists" WHERE "todolists"."list_name" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 1[0m  [["list_name", "Russian Campaign TB"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Contact Hannibal for elephants"], ["due_date", "1791-10-20"], ["description", "Wondering if elephants can travel in the Alps!?"], ["done", "f"], ["todolist_id", 66], ["created_at", "2015-05-03 20:59:10.309514"], ["updated_at", "2015-05-03 20:59:10.309514"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Register Comp Corp 10 men"], ["due_date", "1791-10-15"], ["description", "Ask for Corp 10 confirmations letters."], ["done", "f"], ["todolist_id", 66], ["created_at", "2015-05-03 20:59:10.313868"], ["updated_at", "2015-05-03 20:59:10.313868"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Register Company Corp 4 men"], ["due_date", "1796-09-15"], ["description", "Contact all French departments for conscripts."], ["done", "t"], ["todolist_id", 67], ["created_at", "2015-05-03 20:59:10.318300"], ["updated_at", "2015-05-03 20:59:10.318300"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Follow up registration Comp Corp 4"], ["due_date", "1796-10-15"], ["description", "Ask for Corp 4 confirmations letters."], ["done", "f"], ["todolist_id", 67], ["created_at", "2015-05-03 20:59:10.322268"], ["updated_at", "2015-05-03 20:59:10.322268"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Russian rivers survey"], ["due_date", "1795-12-15"], ["description", "Detailled river maps done by military surveyors."], ["done", "t"], ["todolist_id", 67], ["created_at", "2015-05-03 20:59:10.326281"], ["updated_at", "2015-05-03 20:59:10.326281"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Practice building bridges as if over Volvograd River"], ["due_date", "1811-10-13"], ["description", "Strength tests need to be performed."], ["done", "f"], ["todolist_id", 67], ["created_at", "2015-05-03 20:59:10.329562"], ["updated_at", "2015-05-03 20:59:10.329562"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Send peace letter"], ["due_date", "1795-10-15"], ["description", "Show we are friends before we attack."], ["done", "f"], ["todolist_id", 67], ["created_at", "2015-05-03 20:59:10.333439"], ["updated_at", "2015-05-03 20:59:10.333439"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Contact Hannibal for elephants"], ["due_date", "1791-10-20"], ["description", "Wondering if elephants can travel in the Alps!?"], ["done", "f"], ["todolist_id", 68], ["created_at", "2015-05-03 20:59:10.337303"], ["updated_at", "2015-05-03 20:59:10.337303"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Register Comp Corp 10 men"], ["due_date", "1791-10-15"], ["description", "Ask for Corp 10 confirmations letters."], ["done", "f"], ["todolist_id", 68], ["created_at", "2015-05-03 20:59:10.340840"], ["updated_at", "2015-05-03 20:59:10.340840"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Register Company Corp 4 men"], ["due_date", "1796-09-15"], ["description", "Contact all French departments for conscripts."], ["done", "t"], ["todolist_id", 69], ["created_at", "2015-05-03 20:59:10.345262"], ["updated_at", "2015-05-03 20:59:10.345262"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Follow up registration Comp Corp 4"], ["due_date", "1796-10-15"], ["description", "Ask for Corp 4 confirmations letters."], ["done", "f"], ["todolist_id", 69], ["created_at", "2015-05-03 20:59:10.349278"], ["updated_at", "2015-05-03 20:59:10.349278"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Russian rivers survey"], ["due_date", "1795-12-15"], ["description", "Detailled river maps done by military surveyors."], ["done", "t"], ["todolist_id", 69], ["created_at", "2015-05-03 20:59:10.353450"], ["updated_at", "2015-05-03 20:59:10.353450"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Practice building bridges as if over Volvograd River"], ["due_date", "1811-10-13"], ["description", "Strength tests need to be performed."], ["done", "f"], ["todolist_id", 69], ["created_at", "2015-05-03 20:59:10.357816"], ["updated_at", "2015-05-03 20:59:10.357816"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Send peace letter"], ["due_date", "1795-10-15"], ["description", "Show we are friends before we attack."], ["done", "f"], ["todolist_id", 69], ["created_at", "2015-05-03 20:59:10.361603"], ["updated_at", "2015-05-03 20:59:10.361603"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Contact Hannibal for elephants"], ["due_date", "1791-10-20"], ["description", "Wondering if elephants can travel in the Alps!?"], ["done", "f"], ["todolist_id", 64], ["created_at", "2015-05-03 20:59:10.366411"], ["updated_at", "2015-05-03 20:59:10.366411"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Register Comp Corp 10 men"], ["due_date", "1791-10-15"], ["description", "Ask for Corp 10 confirmations letters."], ["done", "f"], ["todolist_id", 64], ["created_at", "2015-05-03 20:59:10.369951"], ["updated_at", "2015-05-03 20:59:10.369951"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Register Company Corp 4 men"], ["due_date", "1796-09-15"], ["description", "Contact all French departments for conscripts."], ["done", "t"], ["todolist_id", 65], ["created_at", "2015-05-03 20:59:10.373844"], ["updated_at", "2015-05-03 20:59:10.373844"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Follow up registration Comp Corp 4"], ["due_date", "1796-10-15"], ["description", "Ask for Corp 4 confirmations letters."], ["done", "f"], ["todolist_id", 65], ["created_at", "2015-05-03 20:59:10.378863"], ["updated_at", "2015-05-03 20:59:10.378863"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Russian rivers survey"], ["due_date", "1795-12-15"], ["description", "Detailled river maps done by military surveyors."], ["done", "t"], ["todolist_id", 65], ["created_at", "2015-05-03 20:59:10.383212"], ["updated_at", "2015-05-03 20:59:10.383212"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Practice building bridges as if over Volvograd River"], ["due_date", "1811-10-13"], ["description", "Strength tests need to be performed."], ["done", "f"], ["todolist_id", 65], ["created_at", "2015-05-03 20:59:10.387612"], ["updated_at", "2015-05-03 20:59:10.387612"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["task_title", "Send peace letter"], ["due_date", "1795-10-15"], ["description", "Show we are friends before we attack."], ["done", "f"], ["todolist_id", 65], ["created_at", "2015-05-03 20:59:10.391407"], ["updated_at", "2015-05-03 20:59:10.391407"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "todoitems" ("task_title", "due_date", "description", "done", "todolist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["task_title", "Power Consolidation"], ["due_date", "1799-10-12"], ["description", "Combine our forces power."], ["done", "t"], ["todolist_id", 65], ["created_at", "2015-05-03 20:59:10.394962"], ["updated_at", "2015-05-03 20:59:10.394962"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mTodoitem Load (0.2ms)[0m  SELECT  "todoitems".* FROM "todoitems" WHERE "todoitems"."task_title" = ?  ORDER BY "todoitems"."due_date" ASC LIMIT 1  [["task_title", "Russian rivers survey"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("tag_name", "created_at", "updated_at") VALUES (?, ?, ?)  [["tag_name", "Urgent"], ["created_at", "2015-05-03 20:59:10.401384"], ["updated_at", "2015-05-03 20:59:10.401384"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tags_todoitems" ("todoitem_id", "tag_id") VALUES (?, ?)[0m  [["todoitem_id", 192], ["tag_id", 56]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tags" ("tag_name", "created_at", "updated_at") VALUES (?, ?, ?)  [["tag_name", "French War Minister"], ["created_at", "2015-05-03 20:59:10.407945"], ["updated_at", "2015-05-03 20:59:10.407945"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tags_todoitems" ("todoitem_id", "tag_id") VALUES (?, ?)[0m  [["todoitem_id", 192], ["tag_id", 57]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tags" ("tag_name", "created_at", "updated_at") VALUES (?, ?, ?)  [["tag_name", "Construction"], ["created_at", "2015-05-03 20:59:10.412238"], ["updated_at", "2015-05-03 20:59:10.412238"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "tags_todoitems" ("todoitem_id", "tag_id") VALUES (?, ?)[0m  [["todoitem_id", 192], ["tag_id", 58]]
+  [1m[35m (1.4ms)[0m  commit transaction
+
+
+Started DELETE "/logout" for ::1 at 2015-05-03 16:59:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Y4NVaknLW7IIxjRqEkic66uwVgssugrbI2e9IjQJhIngikNOvtmx4vz5rmTjUJAom0Ywj7T3pBQaZv20lv7HBA=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 26ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-05-03 16:59:22 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (113.7ms)
+Completed 200 OK in 2676ms (Views: 2675.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-f4ac9119f78af9b0d19f9eafa7da2441.css?body=1" for ::1 at 2015-05-03 16:59:24 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-05-03 16:59:24 -0400
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for ::1 at 2015-05-03 16:59:24 -0400
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for ::1 at 2015-05-03 16:59:24 -0400
+
+
+Started GET "/assets/jquery-ui/accordion-ad7eda240331939ff10d25352a0315bc.js?body=1" for ::1 at 2015-05-03 16:59:24 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-05-03 16:59:24 -0400
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for ::1 at 2015-05-03 16:59:24 -0400
+
+
+Started GET "/assets/jquery-ui/menu-7a7c9529e62d35813ed0a71fa95242f2.js?body=1" for ::1 at 2015-05-03 16:59:24 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete-5e5a4d7f1f80d346d596661253ace339.js?body=1" for ::1 at 2015-05-03 16:59:24 -0400
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for ::1 at 2015-05-03 16:59:24 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/droppable-75fb6ed9dbb83bf1f0f29c2d15778318.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-2021355f2a0aeca6f77406c225e16af5.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-blind-49d6ffb6eb5c076034162b6d1e1745c3.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-bounce-e72f4f6a65b157d929fbd89f8b2390dd.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-clip-cd4d51c0674f351a44707a41658b7181.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-drop-def98505446ba9f512233830d6500f3a.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-explode-0a42b7e95cf8a3d90da3cb3dce943a8d.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fade-4d808b81f828c7dc6c8b1618d80ed32b.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fold-de72205ff2880aa41078b5abe1865cba.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-highlight-32a231f33cb93ea3ed13cb952bd04c90.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-size-c7ef7adb8e56fe4a76a11dbefcffdad9.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-scale-ce6a6c37c94c883819a78d6815bf71b7.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-puff-35dacd87c19580d27466f980033f6892.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-pulsate-3dbd9c7d4f02ace765adbf794ac8044c.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-shake-efb89015cc38a02f2cbaaa355ebd0aa1.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-slide-5627960ce4f5e1b55f41ee66fe69a1ba.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/effect-transfer-6db8c857d6ae811d1e346fcaf1165390.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar-5bf852897daa19be16725667f5a6d57f.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/selectable-d48286707119e8a116e86cadea677a1b.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu-a8caf21ea3cb8d2fa75cef3aaa007081.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/slider-6fc52f20a37b8f070be1c7e94660e582.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/spinner-ea9e3d6dad328d69198074f73b929b40.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip-974e8ae1e520e685f34c034cd4170ae9.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/jquery-ui-25658f2409fde34c2d638c3816cdce17.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/accounts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/todoitems-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started GET "/assets/application-adf7ac84666ad7c14c64b3725f22caa5.js?body=1" for ::1 at 2015-05-03 16:59:25 -0400
+
+
+Started POST "/sessions" for ::1 at 2015-05-03 16:59:36 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jp9OGYHsArayc+E236kuQ0eZnPFsCA4S0OpkajpwdP2jUr2QUHEPz0V+3ba3kVPUfq7oZMQc8IF8I+RXPhGNrQ==", "user"=>{"login"=>"Matt", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT 1  [["login", "Matt"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 153ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-03 16:59:37 -0400
+Processing by TodolistsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 89]]
+  [1m[35mTodolist Load (0.4ms)[0m  SELECT  "todolists".* FROM "todolists" WHERE "todolists"."user_id" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 5 OFFSET 0  [["user_id", 89]]
+  [1m[36mTodoitem Load (0.2ms)[0m  [1mSELECT "todoitems".* FROM "todoitems" WHERE "todoitems"."todolist_id" = ?  ORDER BY "todoitems"."due_date" ASC[0m  [["todolist_id", 66]]
+  [1m[35mTodoitem Load (0.2ms)[0m  SELECT "todoitems".* FROM "todoitems" WHERE "todoitems"."todolist_id" = ?  ORDER BY "todoitems"."due_date" ASC  [["todolist_id", 67]]
+  Rendered todolists/index.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 295ms (Views: 263.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application-f4ac9119f78af9b0d19f9eafa7da2441.css?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/accordion-ad7eda240331939ff10d25352a0315bc.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/menu-7a7c9529e62d35813ed0a71fa95242f2.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete-5e5a4d7f1f80d346d596661253ace339.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/droppable-75fb6ed9dbb83bf1f0f29c2d15778318.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/effect-2021355f2a0aeca6f77406c225e16af5.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/effect-blind-49d6ffb6eb5c076034162b6d1e1745c3.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/effect-bounce-e72f4f6a65b157d929fbd89f8b2390dd.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/effect-clip-cd4d51c0674f351a44707a41658b7181.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/effect-drop-def98505446ba9f512233830d6500f3a.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/effect-explode-0a42b7e95cf8a3d90da3cb3dce943a8d.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fade-4d808b81f828c7dc6c8b1618d80ed32b.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/effect-highlight-32a231f33cb93ea3ed13cb952bd04c90.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fold-de72205ff2880aa41078b5abe1865cba.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/effect-size-c7ef7adb8e56fe4a76a11dbefcffdad9.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/effect-scale-ce6a6c37c94c883819a78d6815bf71b7.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/effect-puff-35dacd87c19580d27466f980033f6892.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/effect-pulsate-3dbd9c7d4f02ace765adbf794ac8044c.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/effect-shake-efb89015cc38a02f2cbaaa355ebd0aa1.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/effect-slide-5627960ce4f5e1b55f41ee66fe69a1ba.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/effect-transfer-6db8c857d6ae811d1e346fcaf1165390.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar-5bf852897daa19be16725667f5a6d57f.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/selectable-d48286707119e8a116e86cadea677a1b.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu-a8caf21ea3cb8d2fa75cef3aaa007081.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/slider-6fc52f20a37b8f070be1c7e94660e582.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/spinner-ea9e3d6dad328d69198074f73b929b40.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip-974e8ae1e520e685f34c034cd4170ae9.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/jquery-ui-25658f2409fde34c2d638c3816cdce17.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/accounts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/todoitems-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/assets/application-adf7ac84666ad7c14c64b3725f22caa5.js?body=1" for ::1 at 2015-05-03 16:59:37 -0400
+
+
+Started GET "/todolists/66" for ::1 at 2015-05-03 16:59:44 -0400
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"66"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 89]]
+  [1m[35mTodolist Load (0.2ms)[0m  SELECT  "todolists".* FROM "todolists" WHERE "todolists"."user_id" = ? AND "todolists"."id" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 1  [["user_id", 89], ["id", 66]]
+  [1m[36mTodoitem Load (0.2ms)[0m  [1mSELECT  "todoitems".* FROM "todoitems" WHERE "todoitems"."todolist_id" = ?  ORDER BY "todoitems"."due_date" ASC LIMIT 5 OFFSET 0[0m  [["todolist_id", 66]]
+  Rendered todoitems/_todoitem.html.erb (16.0ms)
+  Rendered todolists/show.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 219ms (Views: 215.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/application-f4ac9119f78af9b0d19f9eafa7da2441.css?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/accordion-ad7eda240331939ff10d25352a0315bc.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/menu-7a7c9529e62d35813ed0a71fa95242f2.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete-5e5a4d7f1f80d346d596661253ace339.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/droppable-75fb6ed9dbb83bf1f0f29c2d15778318.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/effect-2021355f2a0aeca6f77406c225e16af5.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/effect-blind-49d6ffb6eb5c076034162b6d1e1745c3.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/effect-bounce-e72f4f6a65b157d929fbd89f8b2390dd.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/effect-clip-cd4d51c0674f351a44707a41658b7181.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/effect-drop-def98505446ba9f512233830d6500f3a.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/effect-explode-0a42b7e95cf8a3d90da3cb3dce943a8d.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fade-4d808b81f828c7dc6c8b1618d80ed32b.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fold-de72205ff2880aa41078b5abe1865cba.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/effect-size-c7ef7adb8e56fe4a76a11dbefcffdad9.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/effect-highlight-32a231f33cb93ea3ed13cb952bd04c90.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/effect-scale-ce6a6c37c94c883819a78d6815bf71b7.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/effect-puff-35dacd87c19580d27466f980033f6892.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/effect-pulsate-3dbd9c7d4f02ace765adbf794ac8044c.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/effect-shake-efb89015cc38a02f2cbaaa355ebd0aa1.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/effect-slide-5627960ce4f5e1b55f41ee66fe69a1ba.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/effect-transfer-6db8c857d6ae811d1e346fcaf1165390.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar-5bf852897daa19be16725667f5a6d57f.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/selectable-d48286707119e8a116e86cadea677a1b.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu-a8caf21ea3cb8d2fa75cef3aaa007081.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/slider-6fc52f20a37b8f070be1c7e94660e582.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/spinner-ea9e3d6dad328d69198074f73b929b40.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip-974e8ae1e520e685f34c034cd4170ae9.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/jquery-ui-25658f2409fde34c2d638c3816cdce17.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/accounts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/todoitems-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/assets/application-adf7ac84666ad7c14c64b3725f22caa5.js?body=1" for ::1 at 2015-05-03 16:59:45 -0400
+
+
+Started GET "/todolists/67" for ::1 at 2015-05-03 16:59:51 -0400
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 89]]
+  [1m[36mTodolist Load (0.1ms)[0m  [1mSELECT  "todolists".* FROM "todolists" WHERE "todolists"."user_id" = ? AND "todolists"."id" = ?  ORDER BY "todolists"."list_due_date" ASC LIMIT 1[0m  [["user_id", 89], ["id", 67]]
+  [1m[35mTodoitem Load (0.2ms)[0m  SELECT  "todoitems".* FROM "todoitems" WHERE "todoitems"."todolist_id" = ?  ORDER BY "todoitems"."due_date" ASC LIMIT 5 OFFSET 0  [["todolist_id", 67]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "todoitems" WHERE "todoitems"."todolist_id" = ?[0m  [["todolist_id", 67]]
+  Rendered todoitems/_todoitem.html.erb (2.6ms)
+  Rendered todolists/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 175ms (Views: 170.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/core-f6c29219d44f4267c6c5f748cb73851a.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/application-f4ac9119f78af9b0d19f9eafa7da2441.css?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/widget-406fc24d615dd4370e049e85fb5f549d.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/accordion-ad7eda240331939ff10d25352a0315bc.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/position-65ef6bd55aa64766623cc74b5d7d353d.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/menu-7a7c9529e62d35813ed0a71fa95242f2.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/autocomplete-5e5a4d7f1f80d346d596661253ace339.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/datepicker-28441b2cd45f0545c8a439f40b98d784.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/button-a8037a4250da171316b7e7521b0d9d0b.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/mouse-504ef967eca0eb03967e3c9751c36d17.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/draggable-d158b51e489137b213fd1eaa96a9b92a.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/resizable-aa565fd6aa9f42700d8c54b318c0c1c8.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/droppable-75fb6ed9dbb83bf1f0f29c2d15778318.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/dialog-ee62065c80cb02fe6e91bf5811c59c91.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-2021355f2a0aeca6f77406c225e16af5.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-blind-49d6ffb6eb5c076034162b6d1e1745c3.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-bounce-e72f4f6a65b157d929fbd89f8b2390dd.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-clip-cd4d51c0674f351a44707a41658b7181.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-drop-def98505446ba9f512233830d6500f3a.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-explode-0a42b7e95cf8a3d90da3cb3dce943a8d.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fade-4d808b81f828c7dc6c8b1618d80ed32b.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-fold-de72205ff2880aa41078b5abe1865cba.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-highlight-32a231f33cb93ea3ed13cb952bd04c90.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-size-c7ef7adb8e56fe4a76a11dbefcffdad9.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-scale-ce6a6c37c94c883819a78d6815bf71b7.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-puff-35dacd87c19580d27466f980033f6892.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-pulsate-3dbd9c7d4f02ace765adbf794ac8044c.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-shake-efb89015cc38a02f2cbaaa355ebd0aa1.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-slide-5627960ce4f5e1b55f41ee66fe69a1ba.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/effect-transfer-6db8c857d6ae811d1e346fcaf1165390.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/progressbar-5bf852897daa19be16725667f5a6d57f.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/selectable-d48286707119e8a116e86cadea677a1b.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/selectmenu-a8caf21ea3cb8d2fa75cef3aaa007081.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/slider-6fc52f20a37b8f070be1c7e94660e582.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/sortable-fe96bfa9ff14377c0dc83b42d0f191e4.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/spinner-ea9e3d6dad328d69198074f73b929b40.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/tabs-7d723642f0cea4ad8b4be12b7af40214.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui/tooltip-974e8ae1e520e685f34c034cd4170ae9.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/jquery-ui-25658f2409fde34c2d638c3816cdce17.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/accounts-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/sessions-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/todoitems-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
+
+
+Started GET "/assets/application-adf7ac84666ad7c14c64b3725f22caa5.js?body=1" for ::1 at 2015-05-03 16:59:51 -0400
