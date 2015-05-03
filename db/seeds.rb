@@ -54,7 +54,7 @@ tblistI.todoitems.create! [{task_title: "Contact Hannibal for elephants", due_da
                 {task_title: "Register Comp Corp 10 men", due_date: "1791/10/15", description: "Ask for Corp 10 confirmations letters.", done: false} ]
 
 tblistR.todoitems.create! [{task_title: "Register Company Corp 4 men", due_date: "1796/09/15", description: "Contact all French departments for conscripts.", done: true},
-                {task_title: "Follow up registration Comp Corp 4", due_date: "1796/10/15", description: "Ask for Corp 4 confirmations letters.", done: true},
+                {task_title: "Follow up registration Comp Corp 4", due_date: "1796/10/15", description: "Ask for Corp 4 confirmations letters.", done: false},
                 {task_title: "Russian rivers survey", due_date: "1795/12/15", description: "Detailled river maps done by military surveyors.", done: true},
                 {task_title: "Practice building bridges as if over Volvograd River", due_date: "1811/10/13", description: "Strength tests need to be performed.", done: false},
                 {task_title: "Send peace letter", due_date: "1795/10/15", description: "Show we are friends before we attack.", done: false} ]
@@ -63,7 +63,7 @@ nblistI.todoitems.create! [{task_title: "Contact Hannibal for elephants", due_da
                 {task_title: "Register Comp Corp 10 men", due_date: "1791/10/15", description: "Ask for Corp 10 confirmations letters.", done: false} ]
 
 nblistR.todoitems.create! [{task_title: "Register Company Corp 4 men", due_date: "1796/09/15", description: "Contact all French departments for conscripts.", done: true},
-                {task_title: "Follow up registration Comp Corp 4", due_date: "1796/10/15", description: "Ask for Corp 4 confirmations letters.", done: true},
+                {task_title: "Follow up registration Comp Corp 4", due_date: "1796/10/15", description: "Ask for Corp 4 confirmations letters.", done: false},
                 {task_title: "Russian rivers survey", due_date: "1795/12/15", description: "Detailled river maps done by military surveyors.", done: true},
                 {task_title: "Practice building bridges as if over Volvograd River", due_date: "1811/10/13", description: "Strength tests need to be performed.", done: false},
                 {task_title: "Send peace letter", due_date: "1795/10/15", description: "Show we are friends before we attack.", done: false},

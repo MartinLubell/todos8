@@ -1,19 +1,38 @@
 <div class="todoitem">
 
-  <div class="sub-left">
+<!--   <div class="sub-left"> -->
+
     <% if (todoitem.done?) %>
       <font color=#00FF00> Due Date: <%= ("#{todoitem.due_date}") %> </font>
     <% else %>
       <font color=#FF0000> Due Date: <%= ("#{todoitem.due_date}") %> </font>
     <% end %>
-    <br/>
-    <%= link_to "#{todoitem.task_title}", [@todolist, todoitem] %> 
-  </div>
+    <%= link_to "#{todoitem.task_title}", [@todolist, todoitem] %>
+    
+<!--   </div> -->
 
-  <div class="sub-right">
+<!--   <div class="sub-right"> -->
+
     <% if (!todoitem.done?) %>
-      <%= button_to "Mark item as Done" %>
+
+      <span id= <%= dom_id(todoitem) %>
+
+        <%= form_for([@todolist, todoitem], remote: true) do |f| %>
+
+        <div style="display: inline; float:right;">
+
+        <%= button_to 'Mark Item as Done', {controller: :todoitems, action: :update_done, todoitem_id: todoitem, todolist_id: @todolist, todoitem_dom_id: dom_id(todoitem)}, method: :get, remote: true %>
+
+        </div>
+
+        </span>
+
+        <% end %>
+
+      </span>
+
     <% end %>
-  </div>
+
+<!--   </div> -->
 
 </div>

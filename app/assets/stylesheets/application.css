@@ -1,33 +1,3 @@
-
-.todoitem {
-        width:450px;
-      }
-
-      .sub-left {
-        padding: 5px;
-        background: lightblue;
-        text-align: center;
-        float:left;
-        width:300px;
-        border-style: solid;
-        border-width: 1px;
-        border-color: red;
-      }
-      .sub-right {
-        padding: 8px;
-        float:left;
-        /*margin-left:300px;*/
-/*        border-style: solid;
-        border-width: 1px;
-        border-color: blue;*/
-      }
-      .bottom {
-        padding: 20px;
-        margin-left: 50px;
-        clear: both;
-        float:left;
-      }
-
 .todolist {
   padding-top: 20px;
 }
@@ -45,3 +15,36 @@
   padding-left: 20px;
   color: red;
 }
+
+.todoitem {
+  width:600px;
+  background: lightpink;
+  padding: 10px;
+  margin: 10 px;
+  border: 1px solid;
+  border-radius: 15 px;
+}
+
+/*.todoitem {
+        width:450px;
+      }
+      .sub-left {
+        padding: 5px;
+        background: lightblue;
+        text-align: center;
+        float:left;
+        width:300px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: red;
+      }
+      .sub-right {
+        padding: 8px;
+        float:left;
+      }
+      .bottom {
+        padding: 20px;
+        margin-left: 50px;
+        clear: both;
+        float:left;
+      }*/

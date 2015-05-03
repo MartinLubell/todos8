@@ -1,6 +1,26 @@
 <div class="todolist">
-  <%= content_tag(:span, "#{@todolist.list_name} (#{@todolist.list_due_date})",
-    class: "todolist_link") %>
+
+  <% @complete = true
+
+  @todoitems.each do |item|
+    if !(item.done?)
+      @complete = false
+      break;
+    end
+  end
+
+  if (@complete == true) %>
+  
+    <%= content_tag(:span, "#{@todolist.list_name} (#{@todolist.list_due_date})",
+    class: "todolist_link", style: "color:#00FF00") %> 
+  
+    <% else %>
+    
+    <%= content_tag(:span, "#{@todolist.list_name} (#{@todolist.list_due_date})",
+    class: "todolist_link", style: "color:#FF0000") %>
+
+    <% end %> <br/>
+    
 </div>
 
 <p/>
@@ -8,12 +28,14 @@
 <%= button_to "Add Todo Item", new_todolist_todoitem_path(@todolist), method: :get %>
 
 <div id="todoitems">
+
   <%= render @todoitems %>
   
   <%= will_paginate @todoitems %>
 </div>
 
 </p>
+
 
   <%= link_to 'Edit Todo List', edit_todolist_path(@todolist) %> | 
   <%= link_to 'Back to Lists', todolists_path %>

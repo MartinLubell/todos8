@@ -16,7 +16,9 @@
 //= require_tree .
 
 $(function(){
-  
   $("#notice").fadeOut(5000);
-
+  
+  $('.datepicker').datepicker({dateFormat: 'yy-mm-dd'});
+  
+  $("#inline").css("display", "inline");
 });

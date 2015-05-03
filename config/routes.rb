@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   get 'todoitems/destroy'
 
+  get 'todoitems/update_done'
+
   get 'sessions/new'
 
   get 'sessions/create'
@@ -29,6 +31,16 @@ Rails.application.routes.draw do
 
   resources :todolists
   root to: "todolists#index"
+
+  # resources :todolists do
+  #   resources :todoitems do
+  #     member do
+  #       put :update_done
+  #     end    
+  #   end 
+  # end
+
+  resources :todoitems, :update_done
 
   resources :todolists do
     resources :todoitems, only: [:new, :show, :edit, :update, :create, :destroy]

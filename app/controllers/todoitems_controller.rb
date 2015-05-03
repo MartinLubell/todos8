@@ -1,5 +1,5 @@
 class TodoitemsController < ApplicationController
-  before_action :set_todolist
+  before_action :set_todolist, except: :update_done
 
   # GET /todoitems
   # GET /todoitems.json
@@ -38,6 +38,21 @@ class TodoitemsController < ApplicationController
     else
       render :edit, alert: "Unable to update To Do item!"
     end
+  end
+
+  def update_done
+    logger.info("This should be valid: #{params[:todoitem_id]}")
+    #logger.info("This should be true: #{@todolist_id}")
+    @todoitem = Todoitem.find(params[:todoitem_id])
+    @todoitem.done = true
+    #logger.info("This should be true: #{@todoitem.task}")
+    @todoitem.save
+
+    @dom = params[:todoitem_dom_id]
+    respond_to do |format|
+      format.js
+    end
+    #render 'update_done.js.erb'
   end
 
   def destroy
